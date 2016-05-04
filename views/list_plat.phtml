@@ -1,0 +1,18 @@
+<div class="row home">
+	<div class="col-xs-12">
+		<br>
+		<label>Semaine <?=htmlentities($curent_week)?></label>
+		<br>
+		<form method="POST">
+			<input type="hidden" name="week" value="<?=htmlentities($week)?>">
+			<button type="submit" class="btn btn-danger" name="action" value="previous_week">Précédente</button>
+			<button type="submit" class="btn btn-danger pull-right" name="action" value="next_week">Suivante</button>
+		</form>
+		<br>
+	</div>
+	<div class="col-xs-12">
+		<div class="row">
+			<?php require('apps/plat.php'); ?>
+		</div>
+	</div>
+</div>

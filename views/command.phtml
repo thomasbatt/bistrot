@@ -1,0 +1,16 @@
+	<h2>Commande n°<?= htmlentities($commandId) ?></h2>
+	<p>
+	  Utilisateur : <?= htmlentities(ucfirst($userLogin)); ?>
+	</p>
+	<h3>Menu du jour <?= htmlentities($platContent); ?> <small><?= htmlentities($platPrice); ?> €</small></h3>
+	<p>
+	  Jour du plat : <?= htmlentities($platDay); ?><br>
+	  Semaine du plat : <?= htmlentities($platWeek); ?><br>
+	  Date du plat : <?= htmlentities($platDate); ?>
+	</p>
+	<h3>Statut de la commande : <?= htmlentities($commandStatut); ?></h3>
+	<p>
+	  Date de la commande : <?= htmlentities($commandDate); ?>
+	</p>
+	<?php require 'apps/btn_valid.php'; ?>
+	<?php require 'apps/comment.php'; ?>

@@ -1,0 +1,54 @@
+<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-<?=htmlentities($command_id)?>"><?=htmlentities($login)?></button>
+
+<div class="modal fade" id="modal-<?=htmlentities($command_id)?>" tabindex="-1" role="dialog" aria-labelledby="modal-label-register">
+	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+		    <div class="modal-header">
+<!-- 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+				<button type="submit" class="btn btn-success pull-right" name="action" value="delete_command">Suprimer</button>
+		        <h3 class="modal-title" id="modal-label-register ">Commande numero <?=htmlentities($command_id)?></h3>
+		    </div>
+		    <div class="modal-body row">
+				<div class="form-group col-xs-6">
+					<label>Du : <strong class="btn btn-link"><?=htmlentities($date_command)?></strong></label>
+				</div>
+				<div class="form-group col-xs-6">
+					<label>Statut : <strong class="btn btn-link"><?=htmlentities($statut_command)?></strong></label>
+				</div>
+		    </div>
+		    <div class="modal-header">
+				<a class="pull-right" href="http://localhost/bistrot/account"><button type="button" class="btn btn-success" >Modifier</button></a>
+		        <h3 class="modal-title" id="modal-label-register">De <?=htmlentities($login)?></h3>
+		    </div>
+		    <div class="modal-body row">
+				<div class="form-group col-xs-6">
+					<label>Prénom : <strong class="btn btn-link"><?=htmlentities($first_name)?></strong></label>
+				</div>
+				<div class="form-group col-xs-6">
+					<label>Nom : <strong class="btn btn-link"><?=htmlentities($last_name)?></strong></label>
+				</div>
+				<div class="form-group col-xs-6">
+			    	<label>Email : <strong class="btn btn-link"><?=htmlentities($email)?></strong></label>
+			 	</div>
+			 	<div class="form-group col-xs-6">
+			    	<label>Téléphone : <strong class="btn btn-link"><?=htmlentities($phone)?></strong></label>
+			 	</div>
+		    </div>
+		    <div class="modal-header">
+		    	<button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#modal-login">Editer</button>
+		    	<h3 class="modal-title" id="modal-label-register">Pour le plat du <?=htmlentities($jours[ $plat['day']-1 ])?></h3>
+			</div>
+		    <div class="modal-body row">
+				<div class="form-group col-xs-6">
+					<label><strong class="btn btn-link"><?=htmlentities($content)?></strong></label>
+				</div>
+				<div class="form-group col-xs-6">
+					<label>Au prix de <strong class="btn btn-link"><?=htmlentities($price)?>€</strong></label>
+				</div>
+		    </div>
+	         <div class="modal-footer">
+		        <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Fermer</button>
+	      	</div>
+	    </div>
+	</div>
+</div>
